@@ -8,4 +8,3 @@ the second test
 dev branch
 master branch test
 second branch test
-bug bug
