@@ -1,6 +1,6 @@
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
-mnist=input_data.read_data_sets('C:\software\work\LearningAlgorithm\dataMNIST_data',one_hot=True)
+mnist=input_data.read_data_sets('/dataMNIST_data',one_hot=True)
 
 def compute_accuracy(v_xs,v_ys):
 	global prediction
@@ -62,4 +62,4 @@ with tf.Session() as sess:
 		sess.run(train_step,feed_dict={xs:batch_xs,ys:batch_ys,keep_prob:0.5})
 		if i%10==0:
 			print(compute_accuracy(mnist.test.images,mnist.test.labels))
-		save_path=saver.save(sess,"C:/software/work/LearningAlgorithm/mnistTest/model.ckpt")
+		save_path=saver.save(sess,"/mnistTest/model.ckpt")
