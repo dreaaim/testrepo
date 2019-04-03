@@ -1,1 +1,1 @@
-C:/software/work/LearningAlgorithm/flower/flower_train.tfrecords filter=lfs diff=lfs merge=lfs -text
+LearningAlgorithm/flower/flower_train.tfrecords filter=lfs diff=lfs merge=lfs -text
