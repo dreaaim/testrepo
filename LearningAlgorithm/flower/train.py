@@ -92,7 +92,7 @@ saver = tf.train.Saver()
 
 with tf.Session() as sess:
 	sess.run(tf.global_variables_initializer())
-	image_batch,label_batch = sess.run[images_batch, labels_batch]
+	image_batch,label_batch = sess.run([images_batch, labels_batch])
 
 	for i in range(17):
 		sess.run(train_step, feed_dict = {xs : image_batch, ys : label_batch, keep_prob : 0.5})
