@@ -5,9 +5,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def read_and_decode(filename):
+	print("read")
 	filename_queue =tf.train.string_input_producer([filename])
+	print("1")
 	reader =tf.TFRecordReader()
+	print("2")
 	_, serialized_example = reader.read(filename_queue)
+	print("3")
 	features = tf.parse_single_example(serialized_example,
 				features={
 					'label': tf.FixedLenFeature([], tf.int64),
@@ -18,11 +22,13 @@ def read_and_decode(filename):
 	img = tf.reshape(img,[224,224,3])
 	img = tf.cast(img, tf.float32) * (1. / 255) - 0.5
 	label =tf.cast(features['label'], tf.int32)
+	print(img.shape,label)
 	return img, label
 
 def create_batch(filename, batchsize):
+	print("go")
 	images, labels = read_and_decode(filename)
-	
+	print(images.shape)
 	min_after_dequeue = 10
 	capacity = min_after_dequeue + 3 * batchsize
 
@@ -33,6 +39,7 @@ def create_batch(filename, batchsize):
 						)
 
 	label_batch =tf.one_hot(label_batch, depth=2)
+	print(image_batch.shape)
 	return image_batch, label_batch
 
 def compute_accuracy(v_xs,v_ys):
@@ -57,10 +64,10 @@ def conv2d(x,W):
 def max_pool_2x2(x):
 	return tf.nn.max_pool(x, ksize = [1,2,2,1], strides = [1,2,2,1], padding = 'SAME')
 
-images_batch, labels_batch = create_batch('flower_train.tfrecords',40)
+images_batch, labels_batch = create_batch("flower_train.tfrecords",40)
 
-xs = tf.placeholder(tf.float32,[224,224,3])
-ys = tf.placeholder(tf.float32,[None,17])
+xs = tf.placeholder(tf.float32,[40,224,224,3])
+ys = tf.placeholder(tf.float32,[40,17])
 keep_prob = tf.placeholder(tf.float32)
 
 xs = tf.reshape(xs,[-1,224,224,3])
@@ -90,12 +97,22 @@ cross_entropy = tf.reduce_mean(-tf.reduce_sum(ys*tf.log(prediction), reduction_i
 train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
 saver = tf.train.Saver()
 
+init = tf.initialize_all_variables()
+
 with tf.Session() as sess:
-	sess.run(tf.global_variables_initializer())
+	sess.run(init)
+	coord = tf.train.Coordinator()
+	threads = tf.train.start_queue_runners(sess=sess,coord=coord)
+	print("start")
 	image_batch,label_batch = sess.run([images_batch, labels_batch])
+	print("finish reading")
 
 	for i in range(17):
+		print(image_batch[i])
 		sess.run(train_step, feed_dict = {xs : image_batch, ys : label_batch, keep_prob : 0.5})
 		print(compute_accuracy(image_batch, label_batch))
 		save_path = saver.save(sess,"model.ckpt")
+
+	coord.request_stop()
+	coord.join(threads)
 		
