@@ -54,10 +54,10 @@ def conv2d(x,W):
 def max_pool_2x2(x):
 	return tf.nn.max_pool(x, ksize = [1,2,2,1], strides = [1,2,2,1], padding = 'SAME')
 
-images_batch, labels_batch = create_batch("bedrive/Flower/LearningAlgorithm/flower/flower_train.tfrecords",40)
+images_batch, labels_batch = create_batch("drive/Flower/LearningAlgorithm/flower/flower_train.tfrecords",40)
 
-xs = tf.placeholder(tf.float32,[40,224,224,3])
-ys = tf.placeholder(tf.float32,[40,17])
+xs = tf.placeholder(tf.float32,[None,224,224,3])
+ys = tf.placeholder(tf.float32,[None,17])
 keep_prob = tf.placeholder(tf.float32)
 
 xs = tf.reshape(xs,[-1,224,224,3])
@@ -84,7 +84,7 @@ b_fc2 = bias_variable([17])
 prediction = tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2) + b_fc2)
 
 cross_entropy = tf.reduce_mean(-tf.reduce_sum(ys*tf.log(prediction), reduction_indices = [1]))
-train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
+train_step = tf.train.AdamOptimizer(1e-2).minimize(cross_entropy)
 saver = tf.train.Saver()
 
 init = tf.initialize_all_variables()
@@ -95,14 +95,14 @@ with tf.Session() as sess:
 	threads = tf.train.start_queue_runners(sess=sess,coord=coord)
 	accuracy = 0
 
-	for i in range(17000):
+	for i in range(5100):
 		image_batch,label_batch = sess.run([images_batch, labels_batch])
 		sess.run(train_step, feed_dict = {xs : image_batch, ys : label_batch, keep_prob : 0.9})
 		accuracy = accuracy + compute_accuracy(image_batch, label_batch)
 		if i%100 ==0:
 			print(accuracy/(i+1))		
 
-	save_path = saver.save(sess,"bedrive/Flower/LearningAlgorithm/flower/model.ckpt")
+	save_path = saver.save(sess,"drive/Flower/LearningAlgorithm/flower/model.ckpt")
 	coord.request_stop()
 	coord.join(threads)
 		
