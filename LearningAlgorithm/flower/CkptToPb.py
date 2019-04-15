@@ -1,5 +1,5 @@
-﻿import tensorflow as tffrom 
-create_tf_record import *
+﻿import tensorflow as tf
+from create_tf_record import *
 from tensorflow.python.framework import graph_util 
 
 resize_height = 224  # 指定图片高度
@@ -26,20 +26,20 @@ def freeze_graph_test(pb_path, image_path):
 			input_is_training_tensor = sess.graph.get_tensor_by_name("is_training:0")             
 			
 			# 定义输出的张量名称            
-			output_tensor_name = sess.graph.get_tensor_by_name("InceptionV3/Logits/SpatialSqueeze:0")
+			output_tensor_name = sess.graph.get_tensor_by_name("out:0")
 			
 			# 读取测试图片            
 			im=read_image(image_path,resize_height,resize_width,normalization=True)            
 			im=im[np.newaxis,:]            
 			# 测试读出来的模型是否正确，注意这里传入的是输出和输入节点的tensor的名字，不是操作节点的名字            
-			# out=sess.run("InceptionV3/Logits/SpatialSqueeze:0", feed_dict={'input:0': im,'keep_prob:0':1.0,'is_training:0':False})            
+			# out=sess.run("out:0", feed_dict={'input:0': im,'keep_prob:0':1.0,'is_training:0':False})            
 			out=sess.run(output_tensor_name, feed_dict={input_image_tensor: im,                                                        
 								input_keep_prob_tensor:1.0,                                                        
 								input_is_training_tensor:False})            
 			print("out:{}".format(out))            
 			score = tf.nn.softmax(out, name='pre')            
 			class_id = tf.argmax(score, 1)            
-			print "pre class_id:{}".format(sess.run(class_id))  
+			print("pre class_id:{}".format(sess.run(class_id)))
 
 def freeze_graph(input_checkpoint,output_graph):    
 	'''    
@@ -50,28 +50,31 @@ def freeze_graph(input_checkpoint,output_graph):
 	# checkpoint = tf.train.get_checkpoint_state(model_folder) #检查目录下ckpt文件状态是否可用    
 	# input_checkpoint = checkpoint.model_checkpoint_path #得ckpt文件路径     
 	# 指定输出的节点名称,该节点名称必须是原模型中存在的节点    
-	
-	output_node_names = "InceptionV3/Logits/SpatialSqueeze"    
+	print(input_checkpoint)
+	output_node_names = "prediction"    
 	saver = tf.train.import_meta_graph(input_checkpoint + '.meta', clear_devices=True)     
 	
 	with tf.Session() as sess:        
-		saver.restore(sess, input_checkpoint) #恢复图并得到数据        
+		saver.restore(sess, input_checkpoint) #恢复图并得到数据  
+		print("save sussess")      
 		output_graph_def = graph_util.convert_variables_to_constants(  # 模型持久化，将变量值固定            
 			sess=sess,            
 			input_graph_def=sess.graph_def,# 等于:sess.graph_def            
 			output_node_names=output_node_names.split(","))# 如果有多个输出节点，以逗号隔开         
-
+		print("output sussess")
 		with tf.gfile.GFile(output_graph, "wb") as f: #保存模型            
 			f.write(output_graph_def.SerializeToString()) #序列化输出        
 		print("%d ops in the final graph." % len(output_graph_def.node)) #得到当前图有几个操作节点
 
 if __name__ == '__main__':    
 	# 输入ckpt模型路径    
-	input_checkpoint='drive/Flower/LearningAlgorithm/flower/model.ckpt-10000'    
+	input_checkpoint='afdrive/Flower/LearningAlgorithm/flower/model.ckpt'    
 	# 输出pb模型的路径    
-	out_pb_path='drive/Flower/LearningAlgorithm/flower/frozen_model.pb'   
-	# 调用freeze_graph将ckpt转为pb    
+	out_pb_path='afdrive/Flower/LearningAlgorithm/flower/frozen_model.pb'   
+	# 调用freeze_graph将ckpt转为pb  
+	print("begin")  
 	freeze_graph(input_checkpoint,out_pb_path)     
 	# 测试pb模型    
+	print("test")
 	image_path = 'drive/Flower/LearningAlgorithm/data/jpg/bluebell/image_0241.jpg'    
 	freeze_graph_test(pb_path=out_pb_path, image_path=image_path)
