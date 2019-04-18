@@ -54,12 +54,11 @@ def conv2d(x,W):
 def max_pool_2x2(x):
 	return tf.nn.max_pool(x, ksize = [1,2,2,1], strides = [1,2,2,1], padding = 'SAME')
 
-images_batch, labels_batch = create_batch("afdrive/Flower/LearningAlgorithm/flower/flower_train.tfrecords",40)
+images_batch, labels_batch = create_batch("drive/Flower/LearningAlgorithm/flower/flower_train.tfrecords",40)
 
 xs = tf.placeholder(tf.float32,[None,224,224,3],name="input")
 ys = tf.placeholder(tf.float32,[None,17])
 keep_prob = tf.placeholder(tf.float32,name="keep_prob")
-is_training = tf.placeholder(tf.bool,name="is_training")
 
 xs = tf.reshape(xs,[-1,224,224,3])
 
@@ -85,9 +84,8 @@ b_fc2 = bias_variable([17])
 out = tf.add(tf.matmul(h_fc1_drop, W_fc2), b_fc2, name = "out")
 prediction = tf.nn.softmax(out, name = "prediction")
 
-if(is_training == True):
-	cross_entropy = tf.reduce_mean(-tf.reduce_sum(ys*tf.log(prediction), reduction_indices = [1]))
-	train_step = tf.train.AdamOptimizer(1e-2).minimize(cross_entropy)
+cross_entropy = tf.reduce_mean(-tf.reduce_sum(ys*tf.log(tf.clip_by_value(prediction, 1e-10, 1.0)), reduction_indices = [1]))
+train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
 
 saver = tf.train.Saver(max_to_keep=1)
 
@@ -101,13 +99,13 @@ with tf.Session() as sess:
 
 	for i in range(1700):
 		image_batch,label_batch = sess.run([images_batch, labels_batch])
-		sess.run(train_step, feed_dict = {xs : image_batch, ys : label_batch, keep_prob : 0.9, is_training: True})
+		sess.run(train_step, feed_dict = {xs : image_batch, ys : label_batch, keep_prob : 0.9})
 		accuracy = accuracy + compute_accuracy(image_batch, label_batch)
 		if i%100 ==0:
 			print(accuracy/100)	
 			accuracy = 0	
 
-	save_path = saver.save(sess,"afdrive/Flower/LearningAlgorithm/flower/model.ckpt")
+	save_path = saver.save(sess,"aadrive/Flower/LearningAlgorithm/flower/model.ckpt")
 	coord.request_stop()
 	coord.join(threads)
 		
