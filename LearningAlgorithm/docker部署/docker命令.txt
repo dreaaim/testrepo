@@ -1,0 +1,6 @@
+/etc/testrepo/LearningAlgorithm/flower
+
+docker run -t --rm -p 8501:8501 \
+   -v "/etc/testrepo/LearningAlgorithm/flower/modelbase64:/models/flower" \      
+   -e MODEL_NAME=flower \
+   tensorflow/serving
