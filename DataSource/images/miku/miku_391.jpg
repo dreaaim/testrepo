@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<meta http-equiv="Last-Modified" content="Thu, 14 Dec 2017 05:28:48 GMT">
+<meta charset="utf-8">
+<title>ページが見つかりません | セガ</title>
+<meta name="keywords" content="セガ,SEGA,ページが見つかりません">
+<meta name="description" content="ページが見つかりません">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta name="viewport" content="width=1200px,maximum-scale=1.0,user-scalable=0"> -->
+<link href="/style.css" rel="stylesheet" media="all">
+<link href="/special/common/css/bnr.css" rel="stylesheet" media="all">
+<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+<link rel="apple-touch-icon" href="/webclip.png" >
+
+<meta property="og:title" content=" &raquo; ページが見つかりませんセガ 製品情報サイト">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sega.jp/sitepolicy">
+<meta property="og:site_name" content="セガ 製品情報サイト">
+<meta property="og:description" content="ページが見つかりません">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="">
+</head>
+<body class="page page-id-900 page-template-default page-sitepolicy">
+<div id="wrapper" style="transform-origin: 0 0;">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TNPHR9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNPHR9');</script>
+<!-- End Google Tag Manager -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<header role="banner">
+
+<div id="header-top">
+<div id="company-logo"><a href="/"><div class="segalogo"></div></a></div>
+<div id="site-name">セガ 製品情報サイト</div>
+
+<div id="link-company-information" class="sp-only"><a href="https://www.sega.co.jp/" target="_blank">企業・採用情報</a></div>
+
+<div class="link-area">
+
+<ul id="link-header-right" >
+<li class="pc-only"><a href="/sitemap/">サイトマップ</a></li>
+<li><a href="https://faq.sega.jp/">よくあるご質問</a></li>
+<li><a href="/contact/">お問い合わせ</a></li>
+</ul>
+<ul id="link-header-right2"  class="sp-only">
+<li id="sp-sega-id"><a href="https://gw.sega.jp/gw/" target="_blank">SEGA ID</a></li>
+<li id="sp-search"><a href="/search/">ゲーム検索</a></li>
+</ul>
+<div id="sega-id" class="pc-only"><a href="https://gw.sega.jp/gw/" target="_blank"><span class="icon"></span><p class="">SEGA ID</p></a></div>
+<div id="search" class="pc-only"><a href="/search/"><span class="icon"></span><p class="">ゲーム検索</p></a></div>
+<div id="link-company-information" class="pc-only"><a href="https://www.sega.co.jp/" target="_blank">企業・採用情報</a></div>
+</div>
+
+</div>
+
+<div id="header-middle" class="clearfix">
+
+
+
+
+<div class="link-area">
+<nav id="global-navi" role="navigation">
+<ul id="megaon">
+
+
+  <li ><a class="cur-sp" href="/apps/">スマホゲーム</a>
+
+  <div>
+  <ul class="local-area clearfix">
+	<li><a class="ico-sp" href="/apps/ios/">iOS</a></li>
+	<li><a class="ico-sp" href="/apps/android/">Android</a></li>
+	<li><a class="ico-sp" href="/apps/kt/">フィーチャー<br>フォン</a></li>
+  </ul>
+
+  <ul class="text-area clearfix">
+    <li>
+	  <a class="clearfix " href="/liveprogram/" >
+	    <span class="sub-nav-title">生放送コンテンツ</span>
+      </a>
+    </li>
+    <li>
+	  <a class="clearfix link-blank" href="https://segacatcher.com/"  target="_blank">
+	    <span class="sub-nav-title">セガキャッチャーオンライン</span>
+      </a>
+    </li>
+  </ul>
+
+  <ul class="kiji-area clearfix">
+    <li>
+      <a class="clearfix" href="https://puyopuyoquest.sega-net.com/"  target="_blank">
+		<div class="text">
+			<span class="sub-nav-title">ぷよぷよ!!クエスト</span>
+			<span>ぷよっと楽しいパズルRPG</span>
+		</div>
+		<figure class="imgcap">
+			<img src="/wp-content/uploads/2018/04/AND-0038.jpg" alt="ぷよぷよ!!クエスト" style="width:250px;">
+		</figure>
+      </a>
+    </li>
+  </ul>
+
+
+  </div>
+  
+  </li>
+
+
+  <li ><a class="cur-soft" href="/soft/">PC・家庭用ゲーム</a>
+
+  <div>
+  <ul class="local-area clearfix">
+	<li><a class="ico-soft" href="/soft/pc/">PC</a></li>
+	<li><a class="ico-soft" href="/soft/ps4/">PS4</a></li>
+	<li><a class="ico-soft" href="/soft/ps3/">PS3</a></li>
+	<li><a class="ico-soft" href="/soft/xbox360/">Xbox One<br>Xbox 360</a></li>
+	<li><a class="ico-soft" href="/soft/switch/">Nintendo Switch</a></li>
+	<li><a class="ico-soft" href="/soft/wii_u/">Wii U<br>Wii</a></li>
+	<li><a class="ico-soft" href="/soft/ps_vita/">PS Vita</a></li>
+	<li><a class="ico-soft" href="/soft/nintendo_3ds/">ニンテンドー3DS</a></li>
+  </ul>
+
+  <ul class="text-area clearfix">
+    <li>
+	  <a class="clearfix " href="/enquete" >
+	    <span class="sub-nav-title">ゲーム購入者アンケート</span>
+      </a>
+    </li>
+  </ul>
+
+  <ul class="kiji-area clearfix">
+    <li>
+      <a class="clearfix" href="http://ryu-ga-gotoku.com/"  target="_blank">
+		<div class="text">
+			<span class="sub-nav-title">龍が如く５　夢、叶えし者</span>
+			<span>2019年6月20日発売予定</span>
+		</div>
+		<figure class="imgcap">
+			<img src="/wp-content/uploads/2018/04/PS4-0190.jpg" alt="龍が如く５　夢、叶えし者" style="width:250px;">
+		</figure>
+      </a>
+    </li>
+  </ul>
+
+
+  </div>
+  
+  </li>
+
+
+  <li ><a class="cur-arcade" href="/arcade/">アーケードゲーム</a>
+
+  <div>
+  <ul class="local-area clearfix">
+	<li><a class="ico-arcade" href="/arcade/video/">ビデオゲーム</a></li>
+	<li><a class="ico-arcade" href="/arcade/trading_card/">トレーディング<br>カードゲーム</a></li>
+	<li><a class="ico-arcade" href="/arcade/uplight/">アップライト・<br>体感ゲーム</a></li>
+	<li><a class="ico-arcade" href="/arcade/medal/">メダルゲーム</a></li>
+	<li><a class="ico-arcade" href="/arcade/prise/">プライズマシン</a></li>
+	<li><a class="ico-arcade" href="/arcade/kidds/">キッズ</a></li>
+  </ul>
+
+
+  <ul class="kiji-area clearfix">
+    <li>
+      <a class="clearfix" href="https://chrono.sega.jp/"  target="_blank">
+		<div class="text">
+			<span class="sub-nav-title">クロノレガリア</span>
+			<span>絶賛稼働中！</span>
+		</div>
+		<figure class="imgcap">
+			<img src="/wp-content/uploads/2018/04/AM-0355-1.jpg" alt="クロノレガリア" style="width:250px;">
+		</figure>
+      </a>
+    </li>
+  </ul>
+
+
+  </div>
+  
+  </li>
+
+
+  <li ><a class="cur-prize" href="/prize/">プライズ</a>
+
+  
+  </li>
+
+
+  <li ><a class="cur-darts" href="/darts/">ダーツ</a>
+
+  
+  </li>
+
+
+  <li ><a class="cur-location" href="/location/">ゲームセンター・施設</a>
+
+  <div>
+  <ul class="local-area clearfix">
+	<li><a class="ico-location" href="/location/tempo/">セガ店舗</a></li>
+	<li><a class="ico-location" href="/location/orbi/">オービィ横浜</a></li>
+	<li><a class="ico-location" href="/location/complex/">複合施設</a></li>
+  </ul>
+
+  <ul class="text-area clearfix">
+    <li>
+	  <a class="clearfix link-blank" href="https://tempo.sega.jp/tnsb/sega_taiyaki_ikebukuro/"  target="_blank">
+	    <span class="sub-nav-title">セガのたい焼き 池袋店</span>
+      </a>
+    </li>
+  </ul>
+
+  <ul class="kiji-area clearfix">
+    <li>
+      <a class="clearfix" href="http://sega-collabocafe.com/akihabara3rd/sunshine10.html"  target="_blank">
+		<div class="text">
+			<span class="sub-nav-title">セガコラボカフェ ラブライブ！サンシャイン!! feat. 電撃G’s magazine</span>
+			<span></span>
+		</div>
+		<figure class="imgcap">
+			<img src="/wp-content/uploads/2018/04/bg_cafe_190417.jpg" alt="セガコラボカフェ ラブライブ！サンシャイン!! feat. 電撃G’s magazine" style="width:250px;">
+		</figure>
+      </a>
+    </li>
+  </ul>
+
+
+  </div>
+  
+  </li>
+
+
+  <li ><a class="cur-toy" href="/toy/">トイ</a>
+
+  
+  </li>
+
+
+  <li ><a class="cur-anime" href="/animation/">アニメ・映像</a>
+
+  
+  </li>
+
+
+</ul>
+</nav>
+</div>
+
+</div>
+
+
+</header>
+<div class="localnavi">
+</div>
+
+<main role="main">
+<article>
+<section>
+<div class="box inner">
+<!-- START module text-box -->
+<div class="error-section">
+<div class="text-box">
+	<div class="main-message">
+		<p>申し訳ございません。</p>
+		<p>お客様がお探しのページは見つかりませんでした。</p>
+	</div>
+	<div class="lead-message">
+		<p>お客様がお探しのページは削除されたか、URLのタイプミスの可能性があります。</p>
+		<p>恐れ入りますが、トップページから該当のページをお探しください。</p>
+	</div>
+<ul class="links text-center">
+    <li class="link-official"><a href="/" class="btn-base">セガ製品情報サイト TOP</a></li>
+</ul>
+
+</div>
+<!-- //END module text-box -->
+</div>
+</div>
+</section>
+</article>
+</main>
+
+
+<!-- START banner-list -->
+<div class="banner-list">
+<div class="inner">
+<ul>
+			<li>
+				<a href="http://www.segasammy.co.jp/japanese/etc/action/" target="_blank">
+				<img src="/wp-content/uploads/2015/09/bnr_shinsai.jpg" alt="セガサミーグループにおける東日本大震災の被災地・被災者の方々への支援について">
+				<p class="caption">東日本大震災 被災地・被災者の方々への支援</p>
+				</a>
+			</li>
+			<li>
+				<a href="/anzentaisaku" >
+				<img src="/wp-content/uploads/2015/09/bnr_anzentaisaku.jpg" alt="アミューズメント施設の安全対策について">
+				<p class="caption">安全対策について</p>
+				</a>
+			</li>
+			<li>
+				<a href="/contact" >
+				<img src="/wp-content/uploads/2015/09/17f14b75947ffd93d8c4176ebb9bfb1d.jpg" alt="各種お問い合わせ">
+				<p class="caption">各種お問い合わせ</p>
+				</a>
+			</li>
+			<li>
+				<a href="https://secure.okbiz.okwave.jp/sega/helpdesk?category_id=622&site_domain=default" >
+				<img src="/wp-content/uploads/2015/09/bnr_opinion.jpg" alt="セガへのご意見">
+				<p class="caption">セガへのご意見</p>
+				</a>
+			</li>
+			<li>
+				<a href="/enquete" >
+				<img src="/wp-content/uploads/2015/09/bnr_enquete.jpg" alt="ゲームソフト購入アンケート">
+				<p class="caption">ゲームソフト購入アンケート</p>
+				</a>
+			</li>
+			<li>
+				<a href="https://gw.sega.jp" target="_blank">
+				<img src="/wp-content/uploads/2015/09/bnr_segaid.jpg" alt="SEGA ID">
+				<p class="caption">SEGA ID</p>
+				</a>
+			</li>
+			<li>
+				<a href="/sns" >
+				<img src="/wp-content/uploads/2015/09/bnr_sns.jpg" alt="セガ公式SNSアカウントリスト">
+				<p class="caption">セガ公式SNSアカウントリスト</p>
+				</a>
+			</li>
+			<li>
+				<a href="https://cs.sega.jp/spweb/" target="_blank">
+				<img src="/wp-content/uploads/2015/09/bnr_sp_web.jpg" alt="セガプレスSP">
+				<p class="caption">セガプレスSP　WEBSITE</p>
+				</a>
+			</li>
+</ul>
+</div>
+
+
+</div>
+<!-- //END banner-list -->
+
+<footer role="contentinfo">
+<div id="footer-top" class="footer-link">
+<div class="inner">
+<ul>
+    <li><span class="heading"><a href="/apps/">スマホゲーム</a></span>
+        <ul>
+            <li><a href="/apps/ios/">iOS</a></li>
+            <li><a href="/apps/android/">Android</a></li>
+            <li><a href="/apps/kt/">フィーチャーフォン</a></li>
+        </ul>
+    </li>
+    <li><span class="heading"><a href="/soft/">PC・家庭用ゲーム</a></span>
+        <ul>
+            <li><a href="/soft/pc/">PC</a></li>
+            <li><a href="/soft/ps4/">PS4</a></li>
+            <li><a href="/soft/ps3/">PS3</a></li>
+            <li><a href="/soft/xbox360/">Xbox One・Xbox 360</a></li>
+            <li><a href="/soft/wii_u/">Wii U・Wii</a></li>
+            <li><a href="/soft/ps_vita/">PS Vita</a></li>
+            <li><a href="/soft/nintendo_3ds/">ニンテンドー3DS</a></li>
+            <li><a href="/soft/switch/">Nintendo Switch</a></li>
+        </ul>
+    </li>
+    <li><span class="heading"><a href="/arcade/">アーケードゲーム</a></span>
+        <ul>
+            <li><a href="/arcade/video/">ビデオゲーム</a></li>
+            <li><a href="/arcade/trading_card/">トレーディング<br>カードゲーム</a></li>
+            <li><a href="/arcade/uplight/">アップライト・<br>体感ゲーム</a></li>
+            <li><a href="/arcade/medal/">メダルゲーム</a></li>
+            <li><a href="/arcade/prise/">プライズマシン</a></li>
+            <li><a href="/arcade/kidds/">キッズ</a></li>
+        </ul>
+    </li>
+    <li><span class="heading"><a href="/location/">ゲームセンター・施設</a></span>
+        <ul>
+            <li><a href="/location/tempo/">セガ店舗</a></li>
+            <li><a href="/location/orbi/">オービィ横浜</a></li>
+            <li><a href="/location/complex/">複合施設</a></li>
+        </ul>
+    </li>
+	<li><!--<span class="heading"><a href="/goods/">TOY・プライズ・アニメ</a></span>-->
+        <ul>
+            <li><a href="/prize/">プライズ</a></li>
+            <li><a href="/darts/">ダーツ</a></li>
+            <li><a href="/toy/">トイ</a></li>
+            <li><a href="/animation/">アニメ・映像</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <ul>
+		    <li><a href="https://www.sega.co.jp/" target="_blank">企業情報</a></li>
+    		<li><a href="https://gw.sega.jp/gw/" target="_blank">SEGA ID</a></li>
+    		<li><a href="/liveprogram/">生放送コンテンツ</a></li>
+    		<li><a href="/sns/">公式SNSアカウント</a></li>
+    		<li><a href="/sitemap/">サイトマップ</a></li>
+    	<!--<li><a href="http://faq.sega.jp/" target="_blank">サポート情報</a></li>-->
+    		<li><a href="https://faq.sega.jp/">よくある ご質問</a></li>
+    		<li><a href="/contact/">お問い合わせ</a></li>
+    		<li><a href="/business/">法人のお客様</a></li>
+        </ul>
+    </li>
+	<li class="sp-only"><a href="https://www.sega.co.jp/" target="_blank">企業情報</a></li>
+    <li class="sp-only"><a href="https://gw.sega.jp/gw/" target="_blank">SEGA ID</a></li>
+<!--<li class="sp-only"><a href="http://faq.sega.jp/" target="_blank">サポート情報</a></li>-->
+    <li class="sp-only"><a href="/sitemap/">サイトマップ</a></li>
+    <li class="sp-only"><a href="http://faq.sega.jp/">よくある ご質問</a></li>
+    <li class="sp-only"><a href="/contact/">お問い合わせ</a></li>
+    <li class="sp-only"><a href="/business/">法人のお客様</a></li>
+</ul>
+</div>
+</div>
+
+<!--2017/03/08 start -->
+<div id="footer-middle">
+
+	<div class="inner">
+	<div class="acordion">
+		<ul>
+			<li><a class="usa" href="http://www.sega.com/" target="_blank">USA</a></li>
+			<li><a class="uk" href="http://www.sega.co.uk/" target="_blank">United Kingdom</a></li>
+			<li><a class="aust" href="http://www.sega-australia.com/" target="_blank">Australia</a></li>
+			<li><a class="fra" href="http://www.sega.fr/" target="_blank">France</a></li>
+			<li><a class="deu" href="http://www.sega.de/" target="_blank">Deutschland</a></li>
+			<li><a class="esp" href="http://www.sega.es/" target="_blank">Espana</a></li>
+			<li><a class="ita" href="http://www.sega-italia.com/" target="_blank">Italia</a></li>
+			<li><a class="ned" href="http://www.sega.nl/" target="_blank">Nederland</a></li>
+		</ul>
+	</div>
+	<!--<div class="close">close</div>-->
+	<div class="country"><div class="triger">各国のセガ公式サイト</div></div>
+	</div>
+</div>
+
+<!--2017/03/08 end -->
+
+<div id="footer-bottom">
+<div class="inner">
+<ul id="footer-navi">
+    <li class="sega-group">セガグループ</li>
+    <li><a href="/sitepolicy/">サイトのご利用について</a></li>
+    <li><a href="https://www.sega.co.jp/privacypolicy_shd/" target="_blank">プライバシーポリシー</a></li>
+</ul>
+<div id="copyright"><small>&copy; SEGA</small></div>
+</div>
+</div>
+</footer>
+
+
+
+<script type="text/javascript">
+	var firstDisp = "";
+</script>
+
+<script src="/js/sega.js?type=page"></script>
+
+
+
+<!-- 2016.03.15 -->
+<style type="text/css">
+#page-top {
+  position: absolute;
+  display: block;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100000;
+}
+#page-top a {
+  text-indent: -9999px;
+    width: 50px;
+	height:50px;
+    display: block;
+  background-image: url('/images/btn_top.png');
+}
+#page-top a:hover {
+    text-decoration: none;
+}
+</style>
+<!-- 2016.03.15 -->
+<!-- 2016.03.15 -->
+<script type="text/javascript" charset="utf-8">
+$(function() {
+    var topBtn = $('#page-top');
+    topBtn.hide();
+	var timerSC = false;
+	
+    //スクロールが100に達したらボタン表示
+    $(window).scroll(function () {
+		var h = window.innerHeight ? window.innerHeight: $(window).height();
+
+
+		var w = $(window).innerWidth()-5;
+		var x = 1200;
+		if (w <= x && w > 670) {
+			$("header").css("display","none");
+			if (timerSC !== false) {
+				clearTimeout(timerSC);
+			}
+			
+			timerSC = setTimeout(function() {
+				$("header").css("top",$(this).scrollTop() * (x / w)).fadeIn("fast");
+			}, 200);
+		} else {
+			clearTimeout(timerSC);
+			$("header").css("top",0);
+		}
+
+		var footerOffset = $("footer").offset();
+		if ($(this).scrollTop()>footerOffset.top-h+10) {
+			topBtn.css("position","absolute");
+			topBtn.css("top",footerOffset.top-60);
+		} else {
+//			topBtn.css("top",$(this).scrollTop()+h-60);
+			topBtn.css("position","fixed");
+			topBtn.css("top","auto");
+			topBtn.css("bottom",0);
+		}
+        if ($(this).scrollTop() > 100) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+    //スクロールしてトップ
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+	
+	$('meta[property=og\\:image]').attr('content', '');
+	
+	var icon_color = "";
+	if (icon_color) {
+		$('body').addClass("page-topics-"+icon_color);
+	}
+
+	//海外リンク
+	$(".acordion").hide();
+	$("div.country").click(function(){
+	// $(this).next().slideToggle();
+		$(this).prev().slideToggle();
+		$(this).toggleClass("open");
+	});
+	$(".acordion .close").click(function(){
+		$(this).parent().slideToggle();
+	});
+
+	$("#megaon").hover(
+		function() {
+		//マウスホバー
+		$("#header-bottom").addClass("hover");
+		},
+		function() {
+        //マウスアウト
+		$("#header-bottom").removeClass("hover");
+		}
+	);
+
+
+});
+</script>
+<!-- 2016.03.15 -->
+
+</div>
+<!--<p id="page-top"><a href="#header-top">PAGE TOP</a></p>-->
+<p id="page-top"><a href="#wrapper">PAGE TOP</a></p>
+</body>
+</html>
+

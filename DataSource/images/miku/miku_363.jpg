@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>Sorry! 您访问的页面不存在！一起找找宝贝吧！-5068儿童网</title>
+<meta charset="utf-8">
+<link href="http://www.5068.com/css/public.css"  rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://2t.5068.com/style/js/jquery.js"></script>
+<style>
+body { font: 12px/1.5 Tahoma,Helvetica,Arial,"//5b8b//4f53",sans-serif;  text-align: left; color: #212121; position:relative; }
+body,td,th { font-family: Tahoma, Helvetica, Arial, //5b8b//4f53, sans-serif; }
+.dao{ height:36px; line-height:36px; text-align:center; font-size:18px; margin-top:40px; display:block;}
+.dao a{font-size:18px; color:#e00;}
+</style>
+</head>
+<body>
+<script type="text/javascript" src="http://js.5068.com/www/404/search_children.js" charset="UTF-8" homepageurl="http://2t.5068.com/" homepagename="返回5068儿童网"></script>
+<div style="display:none">
+<script language="javascript" src="https://s22.cnzz.com/z_stat.php?id=1264426766&web_id=1264426766" type="text/javascript"></script></div>
+<script type="text/javascript" src="http://js.5068.com/tongji.js"></script>
+</div> 
+<div class="dao">
+<a href="javascript:history.go(-1);">&#9666;点击返回上一页</a> <span id="time" style="font-style:normal; font-weight:bold; margin:8px 0; display:inline-block; ">30</span>秒后跳转到首页
+</div> 
+<script>
+var t=30;//设定跳转的时间
+setInterval("refer()",1000); //启动1秒定时
+function refer(){
+if(t==0){
+location="http://2t.5068.com"; //#设定跳转的链接地址
+}
+document.getElementById('time').innerHTML=""+t+""; // 显示倒计时
+t--; // 计数器递减
+}
+</script>
+</body>
+</html>

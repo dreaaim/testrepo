@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>您访问的页面不存在-hao123上网导航</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-114x114.png" />
+<style type="text/css">
+        header,
+        body,
+        section,
+        header,
+        footer,
+        nav,
+        div,
+        ul,
+        li,
+        dl,
+        dt,
+        dd,
+        h1,
+        h2,
+        h3,
+        span,
+        b,
+        i,
+        p,
+        em,
+        a,
+        input,
+        button {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", helvetica, arial;
+            font-size: 13px;
+            line-height: 1.5;
+            background: #fff;
+            color: #222;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: none;
+        }
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+        ul,
+        li {
+            list-style: none;
+        }
+        h1,
+        h2,
+        h3 {
+            font-weight: 500;
+            font-size: 15px;
+        }
+        b,
+        i,
+        em {
+            font-style: normal;
+            font-weight: 500;
+        }
+        img {
+            border: none;
+        }
+        input,
+        textarea {
+            -webkit-appearance: none;
+        }
+
+        .top-img {
+            margin: 50px 0 25px;
+            text-align: center;
+        }
+        .top-img img {
+            width: 235px;
+        }
+        .main {
+            text-align: center;
+        }
+        .return-index {
+            display: inline-block;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 22px 0 42px;
+            border-radius: 2px;
+            background: #2ca30b url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAAb1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8v0wLRAAAAJHRSTlMAWpb6eIdi3QERaFZJIvCO9uegfnFuUEEXDgnXxLq2kR0GwKEv3uAgAAAA+UlEQVQ4y83U23KDIBAGYANorQlETeIp5/Z//2esLtQMrpKbZCb/jS58OosMRm9Lqn5U+swIACINmyuGXINqizxpkhzboJGb/rKRiBdNTCasdpCVu60kdktmPRbreaWceSjFzB5y5Q2sJPYTcwCSyVACHLyBjAxX2XLJH+Uv5k3wFvly+GL5h7FbUGrdzJJG61/aqhOGHG8z5nakuVMUlV99CogZJFAMk+V/7w513zadQ7ZrH7UX2FzaZaQAGGMAqBDK6/5S52FkmxRhFFMZfwY607kbEZ3O8xQh6+6VGZGp7m0GH9WwGZFL7f9MJA0WmkpdUCVFGr04f2B4G/xsF2CRAAAAAElFTkSuQmCC) 20px center no-repeat;
+            background-size: 18px 18px;
+            color: #fff;
+            text-align: center;
+            font-size: 15px;
+        }
+        .main-link {
+            margin-top: 20px;
+        }
+        .main-link a {
+            display: inline-block;
+            height: 20px;
+            line-height: 20px;
+            padding-left: 22px;
+            color: #777;
+            font-size: 14px;
+        }
+        .return {
+            margin-right: 24px;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAWlBMVEUAAAAzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTOzlkqbAAAAHXRSTlMAxLscD/fw3EAvJBUH6NLNsId4X07q4p6OaaSWKTCVsaMAAACRSURBVDjLlZM5EoQwDATX5jBgMOfucs3/v4mLhIguUKKgFUgzo8/b8mZGnrYyxGurX0IDnfKS+F9ZQbyXRuKDtBAfpZ74JK3Ei0y2Bl7malPg1VfOA0+cmooMCGp2WtDqpszTAR/OFXhJF13mM0OUAYU6hWSpu9jYrC02tnsAfAWGIzcBhtBC7Olx+PX4ed/VAanHDVPf9eeqAAAAAElFTkSuQmCC) 0 center no-repeat;
+            background-size: 18px 18px;
+        }
+        .fankui {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAe1BMVEUAAAAzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTMzmTPVVITIAAAAKHRSTlMABNOAIPfv6duqXhOMKfPPyklAFw/jm1IxCt7AlXJtZDrFs6WgWQlz+WeDvgAAASBJREFUOMud0dd2wyAQBNABIySQ1a3i3p35/y+MFJdjFZyT3Af2YbSIBfxBtDXS9zxfmm00ToVN+Caxop9fS9KvbFMIUTS28sny+hYvDJnWbz2iTkmzwEORUFsMWM2kePRLSoURJSnvexjKEBNCSdPVmlphktKsARFwD4c9A4GsWxza5gwbzuA04wYJD3A6MIHmfYS5Nx+XkBokfniMx6VLNRf33/mzfnnukDL/dIYU89+myFm676FkDiH5BYcdZbtmjKPpPIqZdfXCQE3lRcAzOsuUq2iif8X18vHwKb2tGJxvFz/z1q1if9ibleSlzV8yyrZLKRWGKt8ZTQYZekgg58vRCgw/UGe2fb5eHav9xFSkR5oITiRPDT44rRv8zzf8Gho7uRqsSAAAAABJRU5ErkJggg==) 0 center no-repeat;
+            background-size: 18px 18px;
+        }
+        .cpm {
+            margin-top: 30px;
+        }
+        .cpm .color-block .color-block-title {
+            line-height: 46px;
+            margin-bottom: 15px;
+            border-top: 0;
+            border-bottom: solid 1px #eee;
+            color: #222;
+        }
+        .err-title {
+            line-height: 30px;
+            margin: 42px 15px 0;
+            padding-bottom: 10px;
+            border-bottom: solid 1px #eee;
+            font-size: 18px;
+        }
+        .list {
+            position: relative;
+        }
+        .list-news {
+            display: block;
+            border-bottom: 1px solid #eee;
+            overflow: hidden;
+            padding: 15px 0;
+            margin: 0 15px;
+        }
+        .list .list-img {
+            display: -webkit-box;
+            display: box;
+        }
+        .list-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #222;
+            line-height: 24px;
+        }
+        .list-details {
+            height: 16px;
+            font-size: 13px;
+            color: #999;
+            margin-top: 6px;
+        }
+        .list-details i {
+            float: left;
+            line-height: 18px;
+        }
+        .list-details b {
+            color: #ccc;
+        }
+        .list-details em {
+            display: block;
+            height: 15px;
+            font-size: 11px;
+            line-height: 16px;
+            color: #24a500;
+            border: 1px solid #24a500;
+            border-radius: 8px;
+            float: left;
+            margin: 0 10px 0 0;
+            text-align: center;
+            vertical-align: middle;
+            padding: 0 5px;
+        }
+        .list-details span {
+            float: right;
+        }
+        .list-news:visited .list-title,
+        .list-news:visited .list-details {
+            color: #999;
+        }
+        .list-img .list-left {
+            margin-top: -2px;
+            margin-right: 2px;
+        }
+        .list-img.one-img .list-title {
+            padding-right: 2px;
+        }
+        .list-content {
+            padding-right: 6px;
+            line-height: 20px;
+            font-size: 13px;
+            color: #777;
+        }
+        .list-img .list-title {
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        .list-left {
+            -webkit-box-flex: 1;
+                    box-flex: 1;
+        }
+        .list-imgWp {
+            width: 103px;
+            height: 74px;
+            font-size: 0;
+            overflow: hidden;
+        }
+        .list-imgWp-three {
+            height: 72px;
+            overflow: hidden;
+        }
+        .list-imgWp img {
+            min-height: 74px;
+        }
+        .list-imgWp-three img {
+            padding-right: 5px;
+            box-sizing: border-box;
+            vertical-align: top;
+            min-height: 72px;
+        }
+        .list-imgWp-three img:last-child {
+            padding-right: 0;
+        }
+        .list-cpm {
+            margin: 25px 3px 0 3px;
+            overflow: hidden;
+        }
+        .list-cpm-line {
+            margin: 25px 15px 0 15px;
+            height: 1px;
+            background-color: #eee;
+        }
+        .more {
+            margin: 12px 0 22px;
+            color: #222;
+            font-size: 13px;
+            text-align: center;
+        }
+        .more a {
+            color: #24a500;
+        }
+    </style>
+<link rel="stylesheet" type="text/css" href="https://gss0.bdstatic.com/5eR1cXSg2QdV5wybn9fN2DJv/static/html5-index/widget/card/card_colorBlock/card_colorBlock_7b4403f.css"/><link rel="stylesheet" type="text/css" href="https://gss0.bdstatic.com/5eR1cXSg2QdV5wybn9fN2DJv/static/html5-index/common/fc_ad_second_ccd54c5.css"/></head>
+<body>
+<img style="display: none; height: 0; width:0" src="//hao123.baidu.com/static/mapping/bd.php?type=gif" />
+<div class="top-img">
+<a href="//m.hao123.com/?page=erji_index_404">
+<img src="https://gss0.bdstatic.com/5eR1cXSg2QdV5wybn9fN2DJv/static/webapp/errorpage/img/404_b7514d2.png">
+</a>
+</div>
+<div class="main">
+<a href="//m.hao123.com/?page=erji_index_404&pos=sy" class="return-index">去首页看看</a>
+<div class="main-link">
+<a href="###" id="J_return" class="return">返回上页</a>
+<a href="/n/fankui/?page=erji_index_404&pos=yjfk" class="fankui">意见反馈</a>
+</div>
+</div>
+
+<div class="color-block" id="colorBlock1">
+</div>
+<div class="err-title">
+热点新闻</div>
+<div class="block list">
+<a href="http://m.hao123.com/news/midNews/http%3A%2F%2Fbaijiahao.baidu.com%2Fs%3Fid%3D1615356253532619174?page=erji_index_404&pos=list" class="list-news list-img">
+<div class="list-left">
+<h3 class="list-title">水果和蔬菜还可以这样摆盘，价格比原来翻十倍都没有问题！</h3>
+<div class="list-imgWp-three">
+<img src="https://gss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=281619414,3654957100&amp;fm=173&amp;app=25&amp;f=JPEG?w=218&amp;h=146&amp;s=6054EA23CE7277A5486491A80300D063" width="33%" height="auto"><img src="https://gss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3071238717,687444561&amp;fm=173&amp;app=25&amp;f=JPEG?w=218&amp;h=146&amp;s=BF1DCD0372027BF50C0E59FE0300C028" width="33%" height="auto"><img src="https://gss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1620647202,749049706&amp;fm=173&amp;app=25&amp;f=JPEG?w=218&amp;h=146&amp;s=351CC433514057E54E8D70F50300A020" width="33%" height="auto">
+</div>
+<p class="list-details">
+<i>山西新闻网新媒体&nbsp;&nbsp;&nbsp;7天前更新</i>
+<span></span>
+</p>
+</div>
+</a>
+<a href="http://m.hao123.com/news/midNews/http%3A%2F%2Fbaijiahao.baidu.com%2Fs%3Fid%3D1615356060031673057?page=erji_index_404&pos=list" class="list-news list-img">
+<div class="list-left">
+<h3 class="list-title">王者荣耀：国服最美貂蝉的颜值有多高，成为活动现场的焦点</h3>
+<div class="list-imgWp-three">
+<img src="https://gss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=4002428729,1758308711&amp;fm=173&amp;app=25&amp;f=JPEG?w=218&amp;h=146&amp;s=960481EAC6CE14F61FBB47B80300F016" width="33%" height="auto"><img src="https://gss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2947318813,2897642675&amp;fm=173&amp;app=25&amp;f=JPEG?w=218&amp;h=146&amp;s=D1B93DD7EEB2519C8F1F2DE00300A01C" width="33%" height="auto"><img src="https://gss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=30182218,2817285746&amp;fm=173&amp;app=25&amp;f=JPEG?w=218&amp;h=146&amp;s=1851618453319BC01F5505960300C082" width="33%" height="auto">
+</div>
+<p class="list-details">
+<i>华西悦读&nbsp;&nbsp;&nbsp;7天前更新</i>
+<span></span>
+</p>
+</div>
+</a>
+</div>
+<div class="more">
+想看更多内容？<a href="/?page=erji_index_404&pos=list_gd#falls">请戳这里</a>~</div>
+<script type="text/javascript">
+        document.getElementById('J_return').addEventListener('click', function () {
+            new Image().src = '/static/tj.gif?page=erji_index_404&pos=fh&t=' + new Date().getTime();
+            window.history.back();
+        }, false);
+    </script>
+</body><script type="text/javascript" src="https://gss0.bdstatic.com/5eR1cXSg2QdV5wybn9fN2DJv/static/common/lib/mod_75d1f98.js"></script>
+<script type="text/javascript" src="https://gss0.bdstatic.com/5eR1cXSg2QdV5wybn9fN2DJv/static/html5-index/js/zepto_14ab7a5.js"></script>
+<script type="text/javascript" src="https://gss0.bdstatic.com/5eR1cXSg2QdV5wybn9fN2DJv/static/html5-index/common/fc_ad_second_cc9858c.js"></script>
+<script type="text/javascript">!function(){                        var fc_ad = new $.fcAdSecond({
+                num: 6,
+                querySource: 0,
+                tn: '1014995q',
+                container: 'colorBlock1',
+                disStyle: 'tofuBlock',
+                dataSource: 'fc',
+                isHasRef: true,
+                tjByJphp: false,
+                page: 'erji_index_404',
+                pos: 'ludata',
+                level: '2'
+            });
+        }();</script></html>
