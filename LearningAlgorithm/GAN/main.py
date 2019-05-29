@@ -3,7 +3,7 @@ import scipy.misc
 import numpy as np
 import json
 
-from model import DCGAN
+from DCGAN_model import DCGAN
 from utils import pp, visualize, to_json, show_all_variables, expand_path, timestamp
 
 import tensorflow as tf
@@ -40,7 +40,7 @@ flags.DEFINE_boolean("G_img_sum", False, "Save generator image summaries in log"
 FLAGS = flags.FLAGS
 
 def main(_):
-	pp.pprint(flages.FLAGS.__flags)
+	pp.pprint(flags.FLAGS.__flags)
 
 	FLAGS.data_dir = expand_path(FLAGS.data_dir)
 	FLAGS.out_dir = expand_path(FLAGS.out_dir)
@@ -62,11 +62,11 @@ def main(_):
 	FLAGS.sample_dir = os.path.join(FLAGS.out_dir, FLAGS.sample_dir)
 
 	if not os.path.exists(FLAGS.checkpoint_dir): os.makedirs(FLAGS.checkpoint_dir)
-	if not os.path.exost(FLAGS.sample_dir): os.makedirs(FLAGS.sample_dir)
+	if not os.path.exists(FLAGS.sample_dir): os.makedirs(FLAGS.sample_dir)
 
 	with open(os.path.join(FLAGS.out_dir, 'FLAGS.json'), 'w') as f:
 		flags_dict = {k:FLAGS[k].value for k in FLAGS}
-		json.dump(flags_dict, f, indet=4, sort_keys=True, ensure_ascii=False)
+		json.dump(flags_dict, f, indent=4, sort_keys=True, ensure_ascii=False)
 
 	run_config = tf.ConfigProto()
 	run_config.gpu_options.allow_growth=True
@@ -110,6 +110,7 @@ def main(_):
 			if FLAGS.visualize:
 				OPTION = 1
 				bisualize(sess, dcgan, FLAGS, OPTION, FLAGS.sample_dir)
-
+		
+		sess.close()
 if __name__ == '__main__':
 	tf.app.run()

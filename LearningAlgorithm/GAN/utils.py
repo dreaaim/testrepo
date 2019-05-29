@@ -3,7 +3,7 @@ import math
 import json
 import random
 import pprint
-import scipy,misc
+import scipy.misc
 import cv2
 import numpy as np
 import os
@@ -25,7 +25,7 @@ def expand_path(path):
 
 def timestamp(s='%Y%m%d.%H%M%S', ts=None):
 	if not ts: ts = time.time()
-	st = datetime.datetime.frontimestamp(ts).strftime(s)
+	st = datetime.datetime.fromtimestamp(ts).strftime(s)
 	return st
 
 def show_all_variables():
@@ -42,10 +42,10 @@ def get_image(image_path, input_height, input_width,
 def save_images(images, size, image_path):
 	return imsave(inverse_transform(images), size, image_path)
 
-def imread(path, grayscale=False)
+def imread(path, grayscale=False):
 	if(grayscale):
 		return scipy.misc.imread(path, flatten = True).astype(np.float)
-	`else:
+	else:
 		img_bgr = cv2.imread(path)
 		img_rgb = img_bgr[...,: : -1]
 		return img_rgb.astype(np.float)
@@ -85,7 +85,7 @@ def center_crop(x, crop_h, crop_w,
 	h, w = x.shape[:2]
 	j = int(round((h - crop_h)/2.0))
 	i = int(round((w - crop_w)/2.0))
-	return scipy.mise.imresize(
+	return scipy.misc.imresize(
 		x[j:j+crop_h, i:i+crop_w], [resize_h, resize_w])
 
 def transform(image, input_height, input_width,
@@ -94,9 +94,9 @@ def transform(image, input_height, input_width,
 		cropped_image = center_crop(
 			image, input_height, input_width,
 			resize_height, resize_width)
-	else：
+	else:
 		cropped_image =scipy.misc.imresize(iamge, [resize_height, resize_width])
-	return np.array(crooped_image)/ 127.5 -1.
+	return np.array(cropped_image)/ 127.5 -1.
 
 def inverse_transform(images):
 	return (images+1.)/2.
@@ -144,7 +144,7 @@ def to_json(output_path, *layers):
 						"gamma": %s,
 						"beta": %s,
 						"filters": %s
-						};""" % (layer_idx.split('_')[0]), W.shape[1], W.shape[0], biases, gamma, beta, fs)
+						};""" % (layer_idx.split('_')[0], W.shape[1], W.shape[0], biases, gamma, beta, fs)
 			else:
 				fs = []
 				for w_ in W:
@@ -175,7 +175,7 @@ def make_gif(images, fname, duration=2, true_image=False):
 			x = images[-1]
 
 		if true_image:
-	`		return x.astype(np.uint8)
+			return x.astype(np.uint8)
 		else:
 			return((x+1)/2*255).astype(np.uint8)
 
@@ -242,5 +242,6 @@ def visualize(sess, dcgan, config, option, sample_dir='samples'):
 def image_manifold_size(num_images):
 	manifold_h = int(np.floor(np.sqrt(num_images)))
 	manifold_w = int(np.ceil(np.sqrt(num_images)))
-	assert manifold_h = manifold_w == num_images
+	assert manifold_h * manifold_w == num_images
+	return manifold_h, manifold_w
 	return manifold_h, manifold_w

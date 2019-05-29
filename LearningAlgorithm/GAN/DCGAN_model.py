@@ -22,11 +22,11 @@ def gen_random(mode, size):
 
 class DCGAN(object):
 	def __init__(self,sess,input_height=100, input_width=108, crop=True,
-		batch_size=64, sample_num=64,putput_height=64, output_width=64,
+		batch_size=64, sample_num=64,output_height=48, output_width=48,
 		y_dim=None, z_dim=100,gf_dim=64, df_dim=64,
 		gfc_dim=1024, dfc_dim=1024, c_dim=3, dataset_name='default',
 		max_to_keep=1,
-		input_fname_pattern='*.jpg', checkpoit_dir='ckpts', sample_dir='samples', out_dir='./out', data_dir='./data'):
+		input_fname_pattern='*.jpg', checkpoint_dir='ckpts', sample_dir='samples', out_dir='./out', data_dir='./data'):
 
 		"""
    		 Args:
@@ -39,7 +39,8 @@ class DCGAN(object):
       			gfc_dim: (optional) Dimension of gen units for for fully connected layer. [1024]
       			dfc_dim: (optional) Dimension of discrim units for fully connected layer. [1024]
       			c_dim: (optional) Dimension of image color. For grayscale input, set to 1. [3]
-    		"""
+    		"""		
+
 		self.sess = sess
 		self.crop =crop
 
@@ -82,7 +83,7 @@ class DCGAN(object):
 
 		data_path = os.path.join(self.data_dir, self.dataset_name, self.input_fname_pattern)
 		self.data = glob(data_path)
-		if len(self.data) ==0;
+		if len(self.data) ==0:
 			raise Exception("No data found in '" + data_path + "'")
 		np.random.shuffle(self.data)
 		imreadImg = imread(self.data[0])
@@ -120,7 +121,7 @@ class DCGAN(object):
 		
 		self.G                           = self.generator(self.z, self.y)
 		self.D, self.D_logits       = self.discriminator(inputs, self.y, reuse=False)
-		self.sample                   = self.sampler(self.z, self.y)
+		self.sampler                   = self.sampler(self.z, self.y)
 		self.D_, self.D_logits_     = self.discriminator(self.G, self.y, reuse=True)
 
 		self.d_sum = histogram_summary("d", self.D)
@@ -143,7 +144,7 @@ class DCGAN(object):
 		self.d_loss_real_sum = scalar_summary("d_loss_real", self.d_loss_real)
 		self.d_loss_fake_sum = scalar_summary("d_loss_fake", self.d_loss_fake)
 
-		self.d_loss = self.d_loss_real + self.d_d_loss_fake
+		self.d_loss = self.d_loss_real + self.d_loss_fake
 
 		self.g_loss_sum = scalar_summary("g_loss", self.g_loss)
 		self.d_loss_sum = scalar_summary("d_loss", self.d_loss)
@@ -156,10 +157,8 @@ class DCGAN(object):
 		self.saver = tf.train.Saver(max_to_keep=self.max_to_keep)
 
 	def train(self, config):
-		d_optim = tf.train.AdamOptimizer(config,learning_rate, betal=config.betal) \ 
-			.minimize(self.d_loss, var_list=self.d_vars)
-		g_optim = tf.train.AdamOptimizer(config.learning_rate,betal=config.betal)\
-			.minimize(self.g_loss, var_list=self.g_vars)
+		d_optim = tf.train.AdamOptimizer(config.learning_rate, beta1=config.beta1).minimize(self.d_loss, var_list=self.d_vars)
+		g_optim = tf.train.AdamOptimizer(config.learning_rate,beta1=config.beta1).minimize(self.g_loss, var_list=self.g_vars)
 
 		try:
 			tf.global_variables_initializer().run()
@@ -167,7 +166,7 @@ class DCGAN(object):
 			tf.initialize_all_variable().run()
 
 		if config.G_img_sum:
-			self.g_sum = merge_summary([self.z_sum, self.d_sum_, self.G_sum, self.d_loss_fake_sum, self.g_loss_sum])\
+			self.g_sum = merge_summary([self.z_sum, self.d_sum_, self.G_sum, self.d_loss_fake_sum, self.g_loss_sum])
 		else:
 			self.g_sum = merge_summary([self.z_sum, self.d_sum_, self.d_loss_fake_sum, self.g_loss_sum])
 		
@@ -188,13 +187,13 @@ class DCGAN(object):
 		if(self.grayscale):
 			sample_inputs = np.array(sample).astype(np.float32)[:,:,:,None]
 		else:
-			sample_inputs np.array(sample).astype(np.float32)
+			sample_inputs = np.array(sample).astype(np.float32)
 
 		counter =1
 		start_time = time.time()
 		could_load, checkpoint_counter = self.load(self.checkpoint_dir)
 		if could_load:
-			counter checkpoint_counter
+			counter = checkpoint_counter
 			print("load success")
 		else:
 			print("load failed")
@@ -217,7 +216,7 @@ class DCGAN(object):
 						grayscale=self.grayscale) for batch_file in batch_files]
 				if self.grayscale:
 					batch_images = np.array(batch).astype(np.float32)[:, :, :, None]
- 				else:
+				else:
 					batch_images = np.array(batch).astype(np.float32)
 				
 				batch_z = gen_random(config.z_dist, size=[config.batch_size, self.z_dim]) \
@@ -303,11 +302,11 @@ class DCGAN(object):
 			if not self.y_dim:
 				s_h, s_w = self.output_height, self.output_width
 				s_h2, s_w2 = conv_out_size_same(s_h, 2), conv_out_size_same(s_w, 2)
-				s_h4, s_w4 = conv_out_size_same(s_h2, 2), conv_out_size_sam(s_w2, 2)
+				s_h4, s_w4 = conv_out_size_same(s_h2, 2), conv_out_size_same(s_w2, 2)
 				s_h8, s_w8 = conv_out_size_same(s_h4, 2), conv_out_size_same(s_w4, 2)
 				s_h16, s_w16 = conv_out_size_same(s_h8, 2), conv_out_size_same(s_w8, 2)
 
-				size.z_, size.h0_w, self.h0_b = linear(
+				self.z_, self.h0_w, self.h0_b = linear(
 					z, self.gf_dim*8*s_h16*s_w16, 'g_h0_lin', with_w=True)
 
 				self.h0 = tf.reshape(
@@ -339,8 +338,7 @@ class DCGAN(object):
 				yb =tf.reshape(y, [self.batch_size, 1, 1, self.y_dim])
 				z = concat([z, y], 1)
 
-				h0 =tf.nn.relu(
-					self.g_bn0(linear(z, self.gfc_dim, 'g_h0_lin'))
+				h0 =tf.nn.relu(self.g_bn0(linear(z, self.gfc_dim, 'g_h0_lin')))
 				h0 = concat([h0, y], 1)
 
 				h1 = tf.nn.relu(self.g_bn1(
@@ -356,8 +354,8 @@ class DCGAN(object):
 				return tf.nn.sigmoid(
 					deconv2d(h2, [self.batch_size, s_h, s_w, self.c_dim], name='g_h3'))
 
-	def sample(self, z, y=None):
-		with tf.variable_scpoe("generator") as scope:
+	def sampler(self, z, y=None):
+		with tf.variable_scope("generator") as scope:
 			scope.reuse_variables()
 
 			if not self.y_dim:
