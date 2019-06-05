@@ -11,6 +11,8 @@ import time
 import datetime
 from time import gmtime, strftime
 from six.moves import xrange
+import skimage.transform
+import imageio
 
 import tensorflow as tf
 import tensorflow.contrib.slim as slim
@@ -44,7 +46,7 @@ def save_images(images, size, image_path):
 
 def imread(path, grayscale=False):
 	if(grayscale):
-		return scipy.misc.imread(path, flatten = True).astype(np.float)
+		return imageio.imread(path, flatten = True).astype(np.float)
 	else:
 		img_bgr = cv2.imread(path)
 		img_rgb = img_bgr[...,: : -1]
@@ -61,7 +63,7 @@ def merge(images, size):
 		for idx, image in enumerate(images):
 			i = idx % size[1]
 			j = idx // size[1]
-			img[j * h: j * j + h, i * w: i * w +w, :] = image
+			img[j * h: j * h + h, i * w: i * w +w, :] = image
 		return img
 	elif images.shape[3]==1:
 		img = np.zeros((h * size[0], w * size[1]))
@@ -76,7 +78,7 @@ def merge(images, size):
 
 def imsave(images, size, path):
 	image = np.squeeze(merge(images, size))
-	return scipy.misc.imsave(path, image)
+	return imageio.imwrite(path, image)
 
 def center_crop(x, crop_h, crop_w,
 		resize_h=64, resize_w=64):
@@ -85,7 +87,7 @@ def center_crop(x, crop_h, crop_w,
 	h, w = x.shape[:2]
 	j = int(round((h - crop_h)/2.0))
 	i = int(round((w - crop_w)/2.0))
-	return scipy.misc.imresize(
+	return skimage.transform.resize(
 		x[j:j+crop_h, i:i+crop_w], [resize_h, resize_w])
 
 def transform(image, input_height, input_width,
@@ -95,7 +97,7 @@ def transform(image, input_height, input_width,
 			image, input_height, input_width,
 			resize_height, resize_width)
 	else:
-		cropped_image =scipy.misc.imresize(iamge, [resize_height, resize_width])
+		cropped_image =skimage.transform.resize(iamge, [resize_height, resize_width])
 	return np.array(cropped_image)/ 127.5 -1.
 
 def inverse_transform(images):
@@ -183,7 +185,7 @@ def make_gif(images, fname, duration=2, true_image=False):
 	clip.write_gif(fname, fps = len(images) / duration)
 
 def visualize(sess, dcgan, config, option, sample_dir='samples'):
-	image_fname_dim = int(math.ceil(config.batch_size**.5))
+	image_frame_dim = int(math.ceil(config.batch_size**.5))
 	if option == 0:
 		z_sample = np.random.uniform(-0.5, 0.5, size=(config.batch_size, dcgan.z_dim))
 		samples = sess.run(dcgan.sampler, feed_dict={dcgan.z: z_sample})

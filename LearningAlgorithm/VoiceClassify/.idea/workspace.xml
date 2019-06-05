@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a8c64cbd-9c08-41c4-8119-dd6f4b8dec5b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_110-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_115-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_127-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_130-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_137-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_145-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_171-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_175-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_179-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_18-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_184-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_192-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_204-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_206-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_209-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_209-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_209-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_209-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_219-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_225-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_226-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_230-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_232-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_240-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_241-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_251-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_255-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_262-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_262-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_263-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_264-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_272-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_279-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_283-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_286-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_288-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_292-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_293-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_295-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_304-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_311-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_313-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_313-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_313-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_315-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_319-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_319-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_325-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_326-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_327-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_339-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_343-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_344-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_355-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_362-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_375-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_378-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_379-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_384-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_386-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_387-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_388-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_394-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_395-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_400-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_411-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_439-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_443-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_450-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_451-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_455-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_456-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_477-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_486-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_488-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_498-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_499-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_519-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_52-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_521-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_526-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_527-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_539-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_540-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_549-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_55-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_558-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_560-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_560-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_560-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_560-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_565-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_576-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_577-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_577-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_584-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_587-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_589-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_591-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_598-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_604-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_61-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_612-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_613-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_615-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_616-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_619-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_625-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_627-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_642-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_652-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_652-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_652-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_652-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_657-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_660-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_662-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_682-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_692-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_694-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_695-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_709-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_717-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_722-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_722-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_725-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_726-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_727-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_731-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_731-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_731-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_735-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_75-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_75-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_750-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_752-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_756-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_758-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_766-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_781-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_783-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_783-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_783-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_784-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_785-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_788-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_789-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_796-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_80-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_809-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_811-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_83-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_95-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/data/faces/miku_97-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GAN/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GAN/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GAN/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flower/flower_train.tfrecords" beforeDir="false" afterPath="$PROJECT_DIR$/../flower/flower_train.tfrecords" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/preprocess.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-372">
+              <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/batch_input.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="722">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="950">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ops.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="817">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/train.py" />
+        <option value="$PROJECT_DIR$/ops.py" />
+        <option value="$PROJECT_DIR$/layers.py" />
+        <option value="$PROJECT_DIR$/preprocess.py" />
+        <option value="$PROJECT_DIR$/batch_input.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/VoiceClassify.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="271" />
+    <option name="width" value="1440" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="VoiceClassify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VoiceClassify" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a8c64cbd-9c08-41c4-8119-dd6f4b8dec5b" name="Default Changelist" comment="" />
+      <created>1559531767185</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559531767185</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="271" y="0" width="1440" height="1047" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.021398002" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-372">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch_input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -8,7 +8,7 @@ from utils import pp, visualize, to_json, show_all_variables, expand_path, times
 
 import tensorflow as tf
 
-flags = tf.app.flags
+flags = tf.flags
 flags.DEFINE_integer("epoch", 25, "Epoch to train [25]")
 flags.DEFINE_float("learning_rate", 0.0002, "Learning rate of for adam [0.0002]")
 flags.DEFINE_float("beta1", 0.5, "Momentum term of adam [0.5]")
@@ -32,7 +32,7 @@ flags.DEFINE_boolean("export", False, "True for exporting with new batch size")
 flags.DEFINE_boolean("freeze", False, "True for exporting with new batch size")
 flags.DEFINE_integer("max_to_keep", 1, "maximum number of checkpoints to keep")
 flags.DEFINE_integer("sample_freq", 200, "sample every this many iterations")
-flags.DEFINE_integer("ckpt_freq", 200, "save checkpoint every this many iterations")
+flags.DEFINE_integer("ckpt_freq", 175, "save checkpoint every this many iterations")
 flags.DEFINE_integer("z_dim", 100, "dimensions of z")
 flags.DEFINE_string("z_dist", "uniform_signed", "'normal01' or 'uniform_unsigned' or uniform_signed")
 flags.DEFINE_boolean("G_img_sum", False, "Save generator image summaries in log")
@@ -57,9 +57,9 @@ def main(_):
 		if FLAGS.train:
 			FLAGS.out_name += ' - x{}.z{}.{}.y{}.b{}'.format(FLAGS.input_width, FLAGS.z_dim, FLAGS.z_dist, FLAGS.output_width, FLAGS.batch_size)
 
-	FLAGS.out_dir = os.path.join(FLAGS.out_dir, FLAGS.out_name)
-	FLAGS.checkpoint_dir = os.path.join(FLAGS.out_dir, FLAGS.checkpoint_dir)
-	FLAGS.sample_dir = os.path.join(FLAGS.out_dir, FLAGS.sample_dir)
+	#FLAGS.out_dir = os.path.join(FLAGS.out_dir, FLAGS.out_name)
+	#FLAGS.checkpoint_dir = os.path.join(FLAGS.out_dir, FLAGS.checkpoint_dir)
+	#FLAGS.sample_dir = os.path.join(FLAGS.out_dir, FLAGS.sample_dir)
 
 	if not os.path.exists(FLAGS.checkpoint_dir): os.makedirs(FLAGS.checkpoint_dir)
 	if not os.path.exists(FLAGS.sample_dir): os.makedirs(FLAGS.sample_dir)
@@ -109,7 +109,7 @@ def main(_):
 
 			if FLAGS.visualize:
 				OPTION = 1
-				bisualize(sess, dcgan, FLAGS, OPTION, FLAGS.sample_dir)
+				visualize(sess, dcgan, FLAGS, OPTION, FLAGS.sample_dir)
 		
 		sess.close()
 if __name__ == '__main__':
