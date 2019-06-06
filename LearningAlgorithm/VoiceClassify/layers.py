@@ -2,6 +2,7 @@ import tensorflow as tf
 import preprocess
 from ops import *
 
+
 def speech_to_text_network(n_dim=128, n_blocks=3):
     out = conv1d_layer(input_tensor=X, size=1, dim=n_dim, activation='tanh', scale=0.14, bias=False)
 

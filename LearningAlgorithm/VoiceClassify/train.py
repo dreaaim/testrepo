@@ -2,6 +2,8 @@ import os
 import numpy as np
 import tensorflow as tf
 import time
+import layers
+import batch_input
 
 flags = tf.flags
 flags.DEFINE_integer("epoch", 16, "train epoch")
@@ -49,5 +51,41 @@ class MaxPropOptimizer(tf.train.Optimizer):
 
 def train_speech_to_text_network():
     print("开始训练:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-    logit = speech_to_text_network()
+    logit = layers.speech_to_text_network()
+
+    indices = tf.where(tf.not_equal(tf.cast(batch_input.Y, tf.float32), 0.))
+    target = tf.SparseTensor(indices=indices, values=tf.gather_nd(batch_input.Y, indices) - 1,
+                             dense_shape=tf.cast(tf.shape(batch_input.Y), tf.int64))
+    loss = tf.nn.ctc_loss(logit, target, batch_input.sequence_len, time_major=False)
+    lr = 0.001
+    optimizer = MaxPropOptimizer(learning_rate=lr, beta2=0.99)
+    var_list = [t for t in tf.trainable_variables()]
+    gradient = optimizer.compute_gradients(loss, var_list=var_list)
+    optimizer_op = optimizer.apply_gradients(gradient)
+
+    with tf.Session() as sess:
+        sess.run(tf.global_variables_initializer())
+
+        saver = tf.train.Saver(tf.global_variables())
+
+        for epoch in range(16):
+            print(time.strftime('%Y-%m-%d %H:%M:%S'), time.localtime())
+            print("第%d次循环迭代:" % epoch)
+            sess.run(tf.assign(lr, 0.001 * (0.97 ** epoch)))
+
+            global pointer
+            pointer = 0
+            for batch in range(batch_input.n_batch):
+                batches_wavs, batches_labels = batch_input.get_next_batches(batch_input.batch_size)
+                train_loss, _ = sess.run([loss, optimizer_op], feed_dict={X: batches_wavs, Y: batches_labels})
+                print(epoch, batch, train_loss)
+            if epoch % 5 == 0:
+                print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+                print("第%d次模型保存结果:" % (epoch//5))
+                saver.save(sess, './model', global_step=epoch)
+    print("结束训练时刻:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+
+
+if __name__ == "main":
+    train_speech_to_text_network()
 
