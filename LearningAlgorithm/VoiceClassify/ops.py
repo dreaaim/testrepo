@@ -16,7 +16,7 @@ def conv1d_layer(input_tensor, size, dim, activation, scale, bias):
             gamma = tf.get_variable('gamma', dim, dtype=tf.float32, initializer=tf.constant_initializer(0))
             mean_running = tf.get_variable('mean', dim, dtype=tf.float32, initializer=tf.constant_initializer(0))
             variance_running = tf.get_variable('variance', dim, dtype=tf.float32, initializer=tf.constant_initializer(1))
-            mean, variance = tf.nn.moments(out, axes=range(len(out.get_shape()) - 1))
+            mean, variance = tf.nn.moments(out, axes=list(range(len(out.get_shape()) - 1)))
 
             def update_running_stat():
                 decay = 0.99
@@ -57,7 +57,7 @@ def aconv1d_layer(input_tensor, size, rate, activation, scale, bias):
             gamma = tf.get_variable('gamma', shape[-1], dtype=tf.float32, initializer=tf.constant_initializer(1))
             mean_running = tf.get_variable('mean', shape[-1], dtype=tf.float32, initializer=tf.constant_initializer(0))
             variance_running = tf.get_variable('variance', shape[-1], dtype=tf.float32, initializer=tf.constant_initializer(1))
-            mean, variance = tf.nn.moments(out, axes=range(len(out.get_shape()) - 1))
+            mean, variance = tf.nn.moments(out, axes=list(range(len(out.get_shape()) - 1)))
 
             def update_running_stat():
                 decay = 0.99

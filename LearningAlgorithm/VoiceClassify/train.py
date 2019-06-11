@@ -4,6 +4,8 @@ import tensorflow as tf
 import time
 import layers
 import batch_input
+import test
+import preprocess
 
 flags = tf.flags
 flags.DEFINE_integer("epoch", 16, "train epoch")
@@ -12,12 +14,12 @@ flags.DEFINE_float("beta2", 0.999, "beta2 of adam")
 flags.DEFINE_string("data_dir", "./data", "path to dataset")
 flags.DEFINE_string("out_dir", "./out", "directory for outputs")
 flags.DEFINE_string("checkpoint_dir", "checkpoint", "save checkpoints")
-flags.DEFINE_string("train", True, "train or test")
+flags.DEFINE_boolean("train", True, "train or test")
 FLAGS = flags.FLAGS
 
 
 class MaxPropOptimizer(tf.train.Optimizer):
-    def __init__(self, learning_rate = 0.001, beta2 = 0.999, use_locking = False, name = "MaxProp"):
+    def __init__(self, learning_rate=0.001, beta2=0.999, use_locking=False, name="MaxProp"):
         super(MaxPropOptimizer, self).__init__(use_locking, name)
         self._lr = learning_rate
         self._beta2 = beta2
@@ -25,8 +27,8 @@ class MaxPropOptimizer(tf.train.Optimizer):
         self._beta2_t = None
 
     def _prepare(self):
-        self._lr_t = tf.convert_to_tensor(self._lr, name = "learning_rate")
-        self._beta2_t = tf.convert_to_tensor(self._beta2, name = "beta2")
+        self._lr_t = tf.convert_to_tensor(self._lr, name="learning_rate")
+        self._beta2_t = tf.convert_to_tensor(self._beta2, name="beta2")
 
     def _create_slots(self, var_list):
         for v in var_list:
@@ -40,7 +42,7 @@ class MaxPropOptimizer(tf.train.Optimizer):
         else:
             eps = 1e-8
         m = self.get_slot(var, "m")
-        m_t = m.assign(tf.maximum(beta2_t * m + eps. tf.abs(grad)))
+        m_t = m.assign(tf.maximum(beta2_t * m + eps, tf.abs(grad)))
         g_t = grad / m_t
         var_update = tf.assign_sub(var, lr_t * g_t)
         return tf.group(*[var_update, m_t])
@@ -54,11 +56,11 @@ def train_speech_to_text_network():
     logit = layers.speech_to_text_network()
 
     indices = tf.where(tf.not_equal(tf.cast(batch_input.Y, tf.float32), 0.))
-    target = tf.SparseTensor(indices=indices, values=tf.gather_nd(batch_input.Y, indices) - 1,
+    target = tf.SparseTensor(indices=indices, values=tf.gather_nd(batch_input.Y, indices),
                              dense_shape=tf.cast(tf.shape(batch_input.Y), tf.int64))
     loss = tf.nn.ctc_loss(logit, target, batch_input.sequence_len, time_major=False)
-    lr = 0.001
-    optimizer = MaxPropOptimizer(learning_rate=lr, beta2=0.99)
+    lr = FLAGS.learning_rate
+    optimizer = MaxPropOptimizer(learning_rate=lr, beta2=FLAGS.beta2)
     var_list = [t for t in tf.trainable_variables()]
     gradient = optimizer.compute_gradients(loss, var_list=var_list)
     optimizer_op = optimizer.apply_gradients(gradient)
@@ -68,7 +70,7 @@ def train_speech_to_text_network():
 
         saver = tf.train.Saver(tf.global_variables())
 
-        for epoch in range(16):
+        for epoch in range(FLAGS.epoch):
             print(time.strftime('%Y-%m-%d %H:%M:%S'), time.localtime())
             print("第%d次循环迭代:" % epoch)
             sess.run(tf.assign(lr, 0.001 * (0.97 ** epoch)))
@@ -77,7 +79,7 @@ def train_speech_to_text_network():
             pointer = 0
             for batch in range(batch_input.n_batch):
                 batches_wavs, batches_labels = batch_input.get_next_batches(batch_input.batch_size)
-                train_loss, _ = sess.run([loss, optimizer_op], feed_dict={X: batches_wavs, Y: batches_labels})
+                train_loss, _ = sess.run([loss, optimizer_op], feed_dict={batch_input.X: batches_wavs, batch_input.Y: batches_labels})
                 print(epoch, batch, train_loss)
             if epoch % 5 == 0:
                 print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
@@ -86,6 +88,9 @@ def train_speech_to_text_network():
     print("结束训练时刻:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
 
-if __name__ == "main":
-    train_speech_to_text_network()
+if __name__ == '__main__':
+    if FLAGS.train:
+        train_speech_to_text_network()
+    else:
+        test.speech_to_text(preprocess.get_wav_files('d://data/wav/test'))
 

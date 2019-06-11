@@ -18,9 +18,9 @@ def speech_to_text(wav_file):
         decoded = tf.transpose(logit, perm=[1, 0, 2])
         decoded, _ = tf.nn.ctc_beam_search_decoder(decoded, batch_input.sequence_len, merge_repeated=False)
         predict = tf.sparse_to_dense(decoded[0].indices, decoded[0].shape, decoded[0].values) + 1
-        output = sess.run(decoded, feed_dict={X : mfcc})
+        output = sess.run(decoded, feed_dict={batch_input.X : mfcc})
         print(output)
 
 
-if __name__ == "main":
+if __name__ == '__main__':
     speech_to_text(preprocess.wav_files)

@@ -5,8 +5,8 @@ from collections import Counter
 import librosa
 import time
 
-wav_path = 'data/wav/train'
-label_file = 'data/doc/trans/train.word.txt'
+wav_path = 'd://data/wav/train'
+label_file = 'd://data/doc/trans/train.word.txt'
 
 
 def get_wav_files(wav_path=wav_path):
@@ -29,8 +29,8 @@ def get_wav_label(wav_files=wav_files_list, label_file=label_file):
     with open(label_file, encoding='utf-8') as f:
         for label in f:
             label = label.strip('\n')
-            label_id = label.split('', 1)[0]
-            label_text = label.split('', 1)[1]
+            label_id = label.split(' ', 1)[0]
+            label_text = label.split(' ', 1)[1]
             labels_dict[label_id] = label_text
     labels = []
     new_wav_files = []
