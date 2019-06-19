@@ -9,41 +9,41 @@ wav_path = 'd://data/wav/train'
 label_file = 'd://data/doc/trans/train.word.txt'
 
 
-def get_wav_files(wav_path=wav_path):
-    wav_files = []
-    for(dirpath, dirnames, filenames) in os.walk(wav_path):
+def get_wav_files(_wav_path=wav_path):
+    _wav_files = []
+    for(dirpath, dirnames, filenames) in os.walk(_wav_path):
         for filename in filenames:
             if filename.endswith('.wav') or filename.endswith('.WAV'):
                 filename_path = os.sep.join([dirpath,filename])
                 if os.stat(filename_path).st_size < 240000:
                     continue
-                wav_files.append(filename_path)
-    return wav_files
+                _wav_files.append(filename_path)
+    return _wav_files
 
 
-wav_files_list = get_wav_files(wav_path)
+wav_files_list = get_wav_files()
 
 
-def get_wav_label(wav_files=wav_files_list, label_file=label_file):
+def get_wav_label(_wav_files=wav_files_list, _label_file=label_file):
     labels_dict = {}
-    with open(label_file, encoding='utf-8') as f:
-        for label in f:
-            label = label.strip('\n')
-            label_id = label.split(' ', 1)[0]
-            label_text = label.split(' ', 1)[1]
-            labels_dict[label_id] = label_text
-    labels = []
+    with open(_label_file, encoding='utf-8') as f:
+        for _label in f:
+            _label = _label.strip('\n')
+            _label_id = _label.split(' ', 1)[0]
+            _label_text = _label.split(' ', 1)[1]
+            labels_dict[_label_id] = _label_text
+    _labels = []
     new_wav_files = []
-    for wav_file in wav_files:
+    for wav_file in _wav_files:
         wav_id = os.path.basename(wav_file).split('.')[0]
         if wav_id in labels_dict:
-            labels.append(labels_dict[wav_id])
+            _labels.append(labels_dict[wav_id])
             new_wav_files.append(wav_file)
 
-    return new_wav_files, labels
+    return new_wav_files, _labels
 
 
-wav_files, labels = get_wav_label(wav_files_list, label_file)
+wav_files, labels = get_wav_label()
 print("加载训练样本:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 print("样本数:", len(wav_files))
 
@@ -58,7 +58,7 @@ words_size = len(words)
 print('词汇表大小:', words_size)
 
 word_num_map = dict(zip(words,range(len(words))))
-to_num = lambda  word: word_num_map.get(word, len(words))
+to_num = lambda word: word_num_map.get(word, len(words))
 labels_vector = [list(map(to_num, label)) for label in labels]
 
 label_max_len = np.max([len(label) for label in labels_vector])

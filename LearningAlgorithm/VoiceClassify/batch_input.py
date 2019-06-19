@@ -11,11 +11,11 @@ n_batch = len(preprocess.wav_files)//batch_size
 pointer = 0
 
 
-def get_next_batches(batch_size):
+def get_next_batches(_batch_size=batch_size):
     global pointer
     batches_wavs = []
     batches_labels = []
-    for i in range(batch_size):
+    for i in range(_batch_size):
         wav, sr = librosa.load(preprocess.wav_files[pointer], mono=True)
         _mfcc = np.transpose(librosa.feature.mfcc(wav, sr), [1, 0])
         batches_wavs.append(_mfcc.tolist())
@@ -23,7 +23,7 @@ def get_next_batches(batch_size):
         pointer += 1
 
     for mfcc_wavs in batches_wavs:
-        while len(mfcc_wavs) < preprocess.wav_max_len:
+        while len(mfcc_wavs.__str__()) < preprocess.wav_max_len:
             mfcc_wavs.append([0] * 20)
     for label in batches_labels:
         while len(label) < preprocess.label_max_len:

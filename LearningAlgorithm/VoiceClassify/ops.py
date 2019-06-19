@@ -1,4 +1,4 @@
-import  tensorflow as tf
+import tensorflow as tf
 
 conv1d_index = 0
 

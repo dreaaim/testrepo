@@ -58,7 +58,7 @@ def train_speech_to_text_network():
     indices = tf.where(tf.not_equal(tf.cast(batch_input.Y, tf.float32), 0.))
     target = tf.SparseTensor(indices=indices, values=tf.gather_nd(batch_input.Y, indices),
                              dense_shape=tf.cast(tf.shape(batch_input.Y), tf.int64))
-    loss = tf.nn.ctc_loss(logit, target, batch_input.sequence_len, time_major=False)
+    loss = tf.nn.ctc_loss(target, logit, batch_input.sequence_len, time_major=False)
     lr = FLAGS.learning_rate
     optimizer = MaxPropOptimizer(learning_rate=lr, beta2=FLAGS.beta2)
     var_list = [t for t in tf.trainable_variables()]
