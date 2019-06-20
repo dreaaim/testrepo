@@ -1,0 +1,28 @@
+done{
+Traceback (most recent call last):
+  File "train.py", line 93, in <module>
+    train_speech_to_text_network()
+  File "train.py", line 76, in train_speech_to_text_network
+    sess.run(tf.assign(lr, 0.001 * (0.97 ** epoch)))
+  File "D:\python36\lib\site-packages\tensorflow\python\ops\state_ops.py", line 220, in assign
+    if ref.dtype._is_ref_dtype:
+AttributeError: 'float' object has no attribute 'dtype'
+}
+
+{
+Traceback (most recent call last):
+  File "train.py", line 94, in <module>
+    train_speech_to_text_network()
+  File "train.py", line 83, in train_speech_to_text_network
+    train_loss, _ = sess.run([loss, optimizer_op], feed_dict={batch_input.X: batches_wavs, batch_input.Y: batches_labels})
+  File "D:\python36\lib\site-packages\tensorflow\python\client\session.py", line 929, in run
+    run_metadata_ptr)
+  File "D:\python36\lib\site-packages\tensorflow\python\client\session.py", line 1121, in _run
+    np_val = np.asarray(subfeed_val, dtype=subfeed_dtype)
+  File "D:\python36\lib\site-packages\numpy\core\numeric.py", line 538, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: setting an array element with a sequence.
+
+推测batch_input的mfcc_wavs 没有append成功
+}
+

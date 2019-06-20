@@ -54,12 +54,12 @@ class MaxPropOptimizer(tf.train.Optimizer):
 def train_speech_to_text_network():
     print("开始训练:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     logit = layers.speech_to_text_network()
-
+    epoch_now = tf.placeholder(shape=[], dtype=tf.float32, name='epoch_now')
     indices = tf.where(tf.not_equal(tf.cast(batch_input.Y, tf.float32), 0.))
     target = tf.SparseTensor(indices=indices, values=tf.gather_nd(batch_input.Y, indices),
                              dense_shape=tf.cast(tf.shape(batch_input.Y), tf.int64))
     loss = tf.nn.ctc_loss(target, logit, batch_input.sequence_len, time_major=False)
-    lr = FLAGS.learning_rate
+    lr = FLAGS.learning_rate * (0.97 ** epoch_now)
     optimizer = MaxPropOptimizer(learning_rate=lr, beta2=FLAGS.beta2)
     var_list = [t for t in tf.trainable_variables()]
     gradient = optimizer.compute_gradients(loss, var_list=var_list)
@@ -73,7 +73,8 @@ def train_speech_to_text_network():
         for epoch in range(FLAGS.epoch):
             print(time.strftime('%Y-%m-%d %H:%M:%S'), time.localtime())
             print("第%d次循环迭代:" % epoch)
-            sess.run(tf.assign(lr, 0.001 * (0.97 ** epoch)))
+            sess.run(lr, feed_dict={epoch_now: epoch})
+
 
             global pointer
             pointer = 0
