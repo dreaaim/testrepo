@@ -23,7 +23,7 @@ def get_next_batches(_batch_size=batch_size):
         pointer += 1
 
     for mfcc_wavs in batches_wavs:
-        while len(mfcc_wavs.__str__()) < preprocess.wav_max_len:
+        while len(mfcc_wavs) < preprocess.wav_max_len:
             mfcc_wavs.append([0] * 20)
     for label in batches_labels:
         while len(label) < preprocess.label_max_len:

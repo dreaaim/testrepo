@@ -9,7 +9,7 @@ Traceback (most recent call last):
 AttributeError: 'float' object has no attribute 'dtype'
 }
 
-{
+done{
 Traceback (most recent call last):
   File "train.py", line 94, in <module>
     train_speech_to_text_network()
@@ -26,3 +26,9 @@ ValueError: setting an array element with a sequence.
 推测batch_input的mfcc_wavs 没有append成功
 }
 
+{
+FailedPreconditionError (see above for traceback): Attempting to use uninitialized value aconv1d_16/Variable
+         [[node aconv1d_16/Variable/read (defined at D:\software\testrespo\LearningAlgorithm\VoiceClassify\ops.py:69) ]]
+
+ops的variable没有初始化
+}
