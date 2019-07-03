@@ -1,4 +1,4 @@
-import os
+﻿import os
 import numpy as np
 import tensorflow as tf
 import time
@@ -13,7 +13,7 @@ flags.DEFINE_float("learning_rate", 0.001, "Learning rate of adam")
 flags.DEFINE_float("beta2", 0.999, "beta2 of adam")
 flags.DEFINE_string("data_dir", "./data", "path to dataset")
 flags.DEFINE_string("out_dir", "./out", "directory for outputs")
-flags.DEFINE_string("checkpoint_dir", "checkpoint", "save checkpoints")
+flags.DEFINE_string("checkpoint_dir", "./checkpoint/", "save checkpoints")
 flags.DEFINE_boolean("train", True, "train or test")
 FLAGS = flags.FLAGS
 
@@ -147,7 +147,7 @@ def speech_to_text_network(n_dim=128, n_blocks=3):
             skip += s
 
     logit = conv1d_layer(skip, size=1, dim=skip.get_shape().as_list()[-1], activation='tanh', scale=0.08, bias=False)
-    logit = conv1d_layer(logit, size=1, dim=preprocess.words_size, activation=None, scale=0.04, bias=True)
+    logit = conv1d_layer(logit, size=1, dim=preprocess.words_size+1, activation=None, scale=0.04, bias=True)
 
     return logit
 
@@ -173,6 +173,10 @@ def train_speech_to_text_network():
         sess.run(init)
 
         saver = tf.train.Saver(tf.global_variables())
+        if os.path.exists(FLAGS.checkpoint_dir):
+            ckpt = tf.train.get_checkpoint_state(FLAGS.checkpoint_dir)
+            saver = tf.train.import_meta_graph(ckpt.model_checkpoint_path + '.meta')
+            saver.restore(sess, ckpt.model_checkpoint_path)
 
         for epoch in range(FLAGS.epoch):
             print(time.strftime('%Y-%m-%d %H:%M:%S'), time.localtime())
@@ -180,9 +184,7 @@ def train_speech_to_text_network():
             #sess.run(lr, feed_dict={epoch_now: epoch})
             sess.run(tf.assign(lr,0.001 * (0.97 ** epoch)))
 
-
-            global pointer
-            pointer = 0
+            batch_input.pointer = 0
             for batch in range(batch_input.n_batch):
                 batches_wavs, batches_labels = batch_input.get_next_batches(batch_input.batch_size)
                 train_loss, _ = sess.run([loss, optimizer_op], feed_dict={batch_input.X: batches_wavs, batch_input.Y: batches_labels})
@@ -190,7 +192,7 @@ def train_speech_to_text_network():
             if epoch % 5 == 0:
                 print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
                 print("第%d次模型保存结果:" % (epoch//5))
-                saver.save(sess, './model', global_step=epoch)
+                saver.save(sess, FLAGS.checkpoint_dir, global_step=epoch)
     print("结束训练时刻:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
 
