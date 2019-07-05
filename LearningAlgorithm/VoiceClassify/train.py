@@ -166,6 +166,8 @@ def train_speech_to_text_network():
     var_list = [t for t in tf.trainable_variables()]
     gradient = optimizer.compute_gradients(loss, var_list=var_list)
     optimizer_op = optimizer.apply_gradients(gradient)
+    global_step = tf.Variable(0, name='global_step', trainable=False)
+    restored_global_step = 0
     init = tf.initialize_all_variables()
 
     with tf.Session() as sess:
@@ -177,22 +179,25 @@ def train_speech_to_text_network():
             ckpt = tf.train.get_checkpoint_state(FLAGS.checkpoint_dir)
             saver = tf.train.import_meta_graph(ckpt.model_checkpoint_path + '.meta')
             saver.restore(sess, ckpt.model_checkpoint_path)
+            restored_global_step = global_step.eval()
+            print("已经训练了%d次：" % restored_global_step)
 
         for epoch in range(FLAGS.epoch):
             print(time.strftime('%Y-%m-%d %H:%M:%S'), time.localtime())
-            print("第%d次循环迭代:" % epoch)
+            g_step = restored_global_step + epoch
+            print("第%d次循环迭代:" % g_step)
             #sess.run(lr, feed_dict={epoch_now: epoch})
-            sess.run(tf.assign(lr,0.001 * (0.97 ** epoch)))
+            sess.run(tf.assign(lr,0.001 * (0.97 ** g_step)))
 
             batch_input.pointer = 0
             for batch in range(batch_input.n_batch):
                 batches_wavs, batches_labels = batch_input.get_next_batches(batch_input.batch_size)
                 train_loss, _ = sess.run([loss, optimizer_op], feed_dict={batch_input.X: batches_wavs, batch_input.Y: batches_labels})
-                print(epoch, batch, train_loss)
-            if epoch % 5 == 0:
+                print(g_step, batch, train_loss)
+            if g_step % 5 == 0:
                 print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-                print("第%d次模型保存结果:" % (epoch//5))
-                saver.save(sess, FLAGS.checkpoint_dir, global_step=epoch)
+                print("第%d次模型保存结果:" % (g_step//5))
+                saver.save(sess, FLAGS.checkpoint_dir, global_step=g_step)
     print("结束训练时刻:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
 
